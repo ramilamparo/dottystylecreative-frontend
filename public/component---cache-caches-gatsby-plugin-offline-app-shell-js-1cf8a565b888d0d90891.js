@@ -1,2 +1,0 @@
-(self.webpackChunkphotography_portfolio_cms=self.webpackChunkphotography_portfolio_cms||[]).push([[306],{91930:function(t,e,o){"use strict";var n=o(95318);e.__esModule=!0,e.default=void 0;var u=n(o(85354)),r=n(o(67294)),a=function(t){function e(){return t.apply(this,arguments)||this}return(0,u.default)(e,t),e.prototype.render=function(){return r.default.createElement(r.default.Fragment,null)},e}(r.default.Component);e.default=a}}]);
-//# sourceMappingURL=component---cache-caches-gatsby-plugin-offline-app-shell-js-1cf8a565b888d0d90891.js.map
