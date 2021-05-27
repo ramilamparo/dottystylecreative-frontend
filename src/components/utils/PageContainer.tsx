@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
 	html {
 		font-size: 62.5%;
 		background: linear-gradient(${backgroundColor}, ${backgroundColor2});
+		scroll-behavior: smooth;
 	}
 
 	body {

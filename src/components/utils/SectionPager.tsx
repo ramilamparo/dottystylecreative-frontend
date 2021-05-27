@@ -34,12 +34,11 @@ export const SectionPager = ({ children, sections }: SectionPagerProps) => {
 				const child = children[i];
 				const id = child.getAttribute("id");
 				const rect = child.getBoundingClientRect();
-				const center = window.scrollY + window.innerHeight / 2;
-				if (rect.top <= center && rect.bottom >= center) {
+				if (rect.top + window.innerHeight / 2 > 0) {
 					if (id) {
 						const activeIndex = sections.indexOf(id);
-						console.log(activeIndex);
 						setActive(activeIndex);
+						break;
 					}
 				}
 			}
