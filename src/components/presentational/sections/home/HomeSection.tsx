@@ -12,6 +12,7 @@ export interface HomeSectionProps {
 	title: string;
 	subtitle: string;
 	id?: string;
+	onPlay: () => void;
 }
 
 const Container = styled(Section)`
@@ -51,6 +52,7 @@ const PlayButton = styled.button`
 	background-color: transparent;
 	border-radius: 100rem;
 	padding: 1rem;
+	z-index: 1;
 `;
 const LeftContainer = styled.div`
 	width: 50%;
@@ -72,7 +74,12 @@ const PixelGridBackgroundImage = styled(BackgroundImage)`
 	opacity: 0.3;
 `;
 
-export const HomeSection = ({ id, title, subtitle }: HomeSectionProps) => {
+export const HomeSection = ({
+	id,
+	title,
+	subtitle,
+	onPlay
+}: HomeSectionProps) => {
 	return (
 		<Container id={id}>
 			<BackgroundImage src={backgroundImage} alt="background" />
@@ -80,7 +87,7 @@ export const HomeSection = ({ id, title, subtitle }: HomeSectionProps) => {
 			<LeftContainer>
 				<StyledTitle title={title} subtitle={subtitle} />
 			</LeftContainer>
-			<PlayButton>
+			<PlayButton onClick={onPlay}>
 				<PlayIcon>play_arrow</PlayIcon>
 			</PlayButton>
 			<RightContainer>
