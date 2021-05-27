@@ -2,7 +2,7 @@ import React from "react";
 import type { ReactElement } from "react";
 import type { PageProps } from "gatsby";
 import { createGlobalStyle } from "styled-components";
-import { NavBarContent } from "../container/NavBarContent";
+import { backgroundColor, backgroundColor2 } from "utils/styles/theme";
 
 const GlobalStyle = createGlobalStyle`
 	*,
@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
 	html {
 		font-size: 62.5%;
-		background-color: black;
+		background: linear-gradient(${backgroundColor}, ${backgroundColor2});
 	}
 
 	body {
@@ -29,7 +29,7 @@ const PageContainer = ({ children }: PageProps): ReactElement => {
 	return (
 		<>
 			<GlobalStyle />
-			<NavBarContent>{children}</NavBarContent>
+			{children}
 		</>
 	);
 };

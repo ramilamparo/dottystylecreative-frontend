@@ -7,13 +7,14 @@ import { PageWrapper } from "../components/utils/PageWrapper";
 import { SectionPager } from "../components/utils/SectionPager";
 
 const HomePage = () => {
+	const sectionIds = ["Home", "Background", "Solution", "Project"];
 	return (
 		<PageWrapper>
-			<SectionPager>
-				<HomeSection />
-				<BackgroundSection />
-				<SolutionSection />
-				<ProjectSection />
+			<SectionPager sections={sectionIds}>
+				<HomeSection id={sectionIds[0]} />
+				<BackgroundSection id={sectionIds[1]} />
+				<SolutionSection id={sectionIds[2]} />
+				<ProjectSection id={sectionIds[3]} />
 			</SectionPager>
 		</PageWrapper>
 	);

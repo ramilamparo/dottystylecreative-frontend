@@ -1,16 +1,3 @@
-require("dotenv").config({
-	path: `.env.${process.env.NODE_ENV}`
-});
-
-const { GATSBY_API_URL, GATSBY_BROWSER_API_URL } = process.env;
-
-if (!GATSBY_API_URL) {
-	throw new Error("GATSBY_API_URL is not defined in environment!");
-}
-if (!GATSBY_BROWSER_API_URL) {
-	throw new Error("GATSBY_BROWSER_API_URL is not defined in environment!");
-}
-
 module.exports = {
 	siteMetadata: {
 		title: "Ramil Amparo",
@@ -26,8 +13,8 @@ module.exports = {
 		{
 			resolve: "gatsby-plugin-manifest",
 			options: {
-				name: "Ram's Personal Website",
-				short_name: "Ram's Website",
+				name: "The Whitsundays",
+				short_name: "Whitsundays",
 				start_url: "/",
 				background_color: "#070707",
 				theme_color: "#070707",
@@ -46,28 +33,11 @@ module.exports = {
 				]
 			}
 		},
-		{
-			resolve: "gatsby-plugin-apollo",
-			options: {
-				uri: `${GATSBY_BROWSER_API_URL}/graphql`
-			}
-		},
-		{
-			resolve: "gatsby-source-graphql",
-			options: {
-				// Arbitrary name for the remote schema Query type
-				typeName: "STRAPI",
-				// Field under which the remote schema will be accessible. You'll use this in your Gatsby query
-				fieldName: "strapi",
-				// Url to query from
-				url: `${GATSBY_API_URL}/graphql`
-			}
-		},
 		/** Make google fonts with Roboto font and material icons available. */
 		{
 			resolve: "gatsby-plugin-google-fonts",
 			options: {
-				fonts: ["material icons", "Work Sans:400,500, 800", "Abril Fatface:400"]
+				fonts: ["material icons", "Open Sans: 300, 400, 500, 800"]
 			}
 		},
 		/**

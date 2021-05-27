@@ -22,7 +22,7 @@ export class Typography extends Component<TypographyProps, {}> {
 	};
 
 	public static baseTypographyStyle = css`
-		font-family: "Work Sans";
+		font-family: "Open Sans";
 		font-size: 1.5rem;
 		color: white;
 	`;
@@ -33,7 +33,6 @@ export class Typography extends Component<TypographyProps, {}> {
 
 	public static titleTypographyStyle = css`
 		${Typography.baseTypographyStyle}
-		font-family: "Abril Fatface";
 		font-size: 4rem;
 		@media (${Breakpoint.DESKTOP_DOWN}) {
 			font-size: 3rem;

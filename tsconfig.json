@@ -13,7 +13,11 @@
 		"noUnusedParameters": true,
 		"removeComments": false,
 		"preserveConstEnums": true,
-		"allowJs": true
+		"allowJs": true,
+		"baseUrl": "./src",
+		"paths": {
+			"@assets/*": ["assets/*"]
+		}
 	},
 	"include": ["./src/**/*"]
 }
