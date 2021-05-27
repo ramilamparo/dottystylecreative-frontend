@@ -27,7 +27,7 @@ export const NavBar = () => {
 			/>
 			<VideoModal
 				onDismiss={() => setModalOpen(false)}
-				link={"https://www.youtube.com/watch?v=y2SvailvvHQ"}
+				link={"https://www.youtube.com/embed/y2SvailvvHQ"}
 				title={"Cute Seal!"}
 				open={modalOpen}
 			/>

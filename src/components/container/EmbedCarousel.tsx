@@ -4,8 +4,8 @@ import { VideoEmbed } from "components/presentational/VideoEmbed";
 import styled from "styled-components";
 
 const embeds = [
-	["Cute Seal!", "https://www.youtube.com/watch?v=y2SvailvvHQ"],
-	["Definitely not rick roll.", "https://www.youtube.com/watch?v=dQw4w9WgXcQ"]
+	["Cute Seal!", "https://www.youtube.com/embed/y2SvailvvHQ"],
+	["Definitely not rick roll.", "https://www.youtube.com/embed/dQw4w9WgXcQ"]
 ];
 
 const StyledVideoEmbed = styled(VideoEmbed)`

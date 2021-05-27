@@ -17,7 +17,7 @@ const Container = styled.nav`
 	display: flex;
 	align-items: center;
 	padding: 1.5rem 20rem;
-	z-index: 1;
+	z-index: 10;
 	justify-content: space-between;
 `;
 

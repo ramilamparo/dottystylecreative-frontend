@@ -7,7 +7,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "gatsby develop",
 		"build": "gatsby build",
-		"deploy": "gatsby build --prefix-paths && gh-pages -d public"
+		"deploy": "gatsby clean && gatsby build --prefix-paths && gh-pages -d public"
 	},
 	"author": "",
 	"license": "ISC",
