@@ -2,8 +2,7 @@ module.exports = {
 	pathPrefix: "/dottystylecreative-frontend",
 	siteMetadata: {
 		title: "Ramil Amparo",
-		description:
-			"This is my simple portfolio site to show off my skills and experience.",
+		description: "Dottystyle frontend",
 		author: "Ramil Amparo"
 	},
 	plugins: [
