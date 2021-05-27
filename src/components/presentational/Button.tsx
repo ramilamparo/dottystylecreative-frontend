@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
+import { Typography } from "./Typography";
 
 export interface ButtonProps {
 	onClick?: () => void;
@@ -9,6 +10,7 @@ export interface ButtonProps {
 }
 
 const StyledButton = styled.button<{ $active?: boolean }>`
+	${Typography.baseTypographyStyle}
 	background-color: transparent;
 	${(p) => p.$active && `background-color: rgba(0, 0, 0, 0.4);`}
 	color: white;

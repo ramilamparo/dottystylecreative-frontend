@@ -1,3 +1,4 @@
+import { NavBar } from "components/container/NavBar";
 import React from "react";
 import { BackgroundSection } from "../components/container/BackgroundSection";
 import { HomeSection } from "../components/container/HomeSection";
@@ -10,6 +11,7 @@ const HomePage = () => {
 	const sectionIds = ["Home", "Background", "Solution", "Project"];
 	return (
 		<PageWrapper>
+			<NavBar />
 			<SectionPager sections={sectionIds}>
 				<HomeSection id={sectionIds[0]} />
 				<BackgroundSection id={sectionIds[1]} />

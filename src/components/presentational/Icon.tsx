@@ -7,7 +7,6 @@ export interface IconProps {
 }
 
 const StyledIcon = styled.span`
-	color: black;
 	font-family: "Material Icons";
 	font-weight: normal;
 	font-style: normal;

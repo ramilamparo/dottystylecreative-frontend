@@ -1,8 +1,8 @@
 import React from "react";
 import type { ReactElement } from "react";
 import type { PageProps } from "gatsby";
-import { createGlobalStyle } from "styled-components";
 import { backgroundColor, backgroundColor2 } from "utils/styles/theme";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 	*,
