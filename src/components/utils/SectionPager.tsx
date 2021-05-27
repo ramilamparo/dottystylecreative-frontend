@@ -34,7 +34,7 @@ export const SectionPager = ({ children, sections }: SectionPagerProps) => {
 				const child = children[i];
 				const id = child.getAttribute("id");
 				const rect = child.getBoundingClientRect();
-				if (rect.top + window.innerHeight / 2 > 0) {
+				if (typeof window !== undefined && rect.top + window.innerHeight / 2 > 0) {
 					if (id) {
 						const activeIndex = sections.indexOf(id);
 						setActive(activeIndex);

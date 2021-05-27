@@ -11,9 +11,13 @@ export const useOnScroll = (callback?: UseOnScrollCallback) => {
 	}, [callback]);
 
 	useEffect(() => {
-		window.addEventListener("scroll", handleOnScrollDebounced);
+		if (typeof window !== "undefined") {
+			window.addEventListener("scroll", handleOnScrollDebounced);
+		}
 		return () => {
-			window.removeEventListener("scroll", handleOnScrollDebounced);
+			if (typeof window !== "undefined") {
+				window.removeEventListener("scroll", handleOnScrollDebounced);
+			}
 		};
 	}, [handleOnScrollDebounced]);
 };

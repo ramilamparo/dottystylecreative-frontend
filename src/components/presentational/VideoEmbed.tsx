@@ -7,7 +7,7 @@ export interface VideoEmbedProps {
 }
 
 export const VideoEmbed = ({ className, title, link }: VideoEmbedProps) => {
-	if (window) {
+	if (typeof window !== "undefined") {
 		return (
 			<iframe
 				id="ytplayer"
