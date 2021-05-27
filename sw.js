@@ -33,22 +33,26 @@ self.__precacheManifest = [
     "url": "framework-9093c06fe819196abfd0.js"
   },
   {
-    "url": "app-8e04c5aaf6ee93d67786.js"
+    "url": "app-8f2a7b602b073b6eb22a.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "167cbc8ca59e0072bdfb5d5ea79840b9"
+    "revision": "45625de813fd51aeedb4118cf980b615"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-1cf8a565b888d0d90891.js"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "f6081b83111aea4128c98944b7fafccc"
+    "revision": "29a568eddf087f6fa2b398328aba08aa"
+  },
+  {
+    "url": "page-data/sq/d/63159454.json",
+    "revision": "f8ae599d4ebdf0979247bbbd790096b4"
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "8d0166217be0fdf6f97d8bfadd132a07"
+    "revision": "2588d60f6a0113e0459a3c0f1664f045"
   },
   {
     "url": "polyfill-06441a6bd7686e3cc0c4.js"
@@ -147,7 +151,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/dottystylecreative-frontend/app-8e04c5aaf6ee93d67786.js`))) {
+  if (!resources || !(await caches.match(`/dottystylecreative-frontend/app-8f2a7b602b073b6eb22a.js`))) {
     return await fetch(event.request)
   }
 
