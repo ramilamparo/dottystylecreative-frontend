@@ -14,7 +14,7 @@ export const VideoEmbed = ({ className, title, link }: VideoEmbedProps) => {
 			title={title}
 			width="640"
 			height="360"
-			src={`${link}?autoplay=0`}
+			src={`${link}?autoplay=0&origin=https://github.com`}
 			frameBorder="0"
 			className={className}
 		></iframe>
