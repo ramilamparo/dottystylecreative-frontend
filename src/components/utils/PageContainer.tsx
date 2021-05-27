@@ -3,6 +3,7 @@ import type { ReactElement } from "react";
 import type { PageProps } from "gatsby";
 import { backgroundColor, backgroundColor2 } from "utils/styles/theme";
 import { createGlobalStyle } from "styled-components";
+import { Helmet } from "./Helmet";
 
 const GlobalStyle = createGlobalStyle`
 	*,
@@ -30,6 +31,7 @@ const PageContainer = ({ children }: PageProps): ReactElement => {
 	return (
 		<>
 			<GlobalStyle />
+			<Helmet />
 			{children}
 		</>
 	);
