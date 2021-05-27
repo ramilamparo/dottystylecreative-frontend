@@ -1,4 +1,5 @@
 module.exports = {
+	pathPrefix: "/ramilamparo/dottystylecreative-frontend",
 	siteMetadata: {
 		title: "Ramil Amparo",
 		description:
