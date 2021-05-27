@@ -27,27 +27,35 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-1d58adf2d014b80d24f4.js"
+    "url": "webpack-runtime-b87c7d5fe23cf91a15e6.js"
   },
   {
     "url": "framework-9093c06fe819196abfd0.js"
   },
   {
-    "url": "app-44a1350dd326d2ae8b03.js"
+    "url": "app-81dc77bb7de360653aaa.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "f8f6f00b8a3d7e553a4cc64d1679049b"
+    "revision": "9864c1f34b30b7fafebaadc4071676bb"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-1cf8a565b888d0d90891.js"
+  },
+  {
+    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
+    "revision": "f6081b83111aea4128c98944b7fafccc"
+  },
+  {
+    "url": "page-data/app-data.json",
+    "revision": "d87db0b2684dba1f030d4fb27923beaf"
   },
   {
     "url": "polyfill-06441a6bd7686e3cc0c4.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "7a21f0967b6b476dc4af65c11fa02592"
+    "revision": "71f372b0d9dd35c1c33cc37783543cb2"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -134,12 +142,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/ramilamparo/dottystylecreative-frontend`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-44a1350dd326d2ae8b03.js`))) {
+  if (!resources || !(await caches.match(`/ramilamparo/dottystylecreative-frontend/app-81dc77bb7de360653aaa.js`))) {
     return await fetch(event.request)
   }
 
@@ -152,7 +160,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/ramilamparo/dottystylecreative-frontend/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
